@@ -1,9 +1,6 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import logoImg from "../../assets/logo.png";
-import Box from "../regular/Carts/Box";
 import {
   bookIcon,
   bookmarkIcon,
@@ -79,7 +76,7 @@ export default function NavItems() {
   return (
     <>
       {/* nav items */}
-      <div className="flex items-center justify-center flex-col gap-[27px]">
+      <div className="flex items-center justify-center flex-col gap-6 my-[27px]">
         {items.map((item, idx) => (
           <NavItem item={item} key={idx} />
         ))}
@@ -97,7 +94,6 @@ function NavItem({ item, idx }) {
       className="flex items-center gap-4 justify-center w-10 h-10 rounded-full bg-iconBg text-iconColor"
     >
       <figure>{icon}</figure>
-      {/* <h3> {label} </h3> */}
     </Link>
   );
 }

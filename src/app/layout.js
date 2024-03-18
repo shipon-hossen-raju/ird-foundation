@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             {/* top header */}
             <TopHeader className="mb-7" />
 
-            <div className="flex items-start justify-between">
+            <div className="flex items-start justify-between gap-[30px]">
               <div className="w-full">{children}</div>
 
               {/* right side setting */}

@@ -1,7 +1,11 @@
 "use client";
 import Box from "@/components/regular/Carts/Box";
+import {
+  boxUpBoxIcon,
+  dashboardIcon,
+  languageSelectIcon,
+} from "@/components/utils/icon-svg";
 import { useState } from "react";
-import { dashboardIcon, languageSelectIcon } from "../utils/icon-svg";
 
 const Settings = ({ className }) => {
   const [isCurrentState, setIsCurrentState] = useState("");
@@ -18,7 +22,7 @@ const Settings = ({ className }) => {
     {
       id: "general-settings",
       label: "general setting",
-      icon: "Icon",
+      icon: boxUpBoxIcon,
       isCurrentState,
       click: () => setIsCurrentState("general-settings"),
       children: [],
@@ -77,8 +81,8 @@ function SettingItem({ item }) {
   const { id, label, icon, isCurrentState, click, children } = item;
 
   return (
-    <div>
-      <div className="bg-secondary p-2.5 rounded-[10px] flex items-center justify-start gap-5 border-l-8 hover:border-primary group cursor-pointer border-l-transparent">
+    <div className="border rounded-[10px]">
+      <div className="bg-secondary p-2.5 rounded-[10px] flex items-center justify-start gap-5 border-l-[5px] hover:border-primary group cursor-pointer border-l-transparent transition duration-300">
         <figure className="w-10 h-10 rounded-full bg-iconBg text-iconColor flex items-center justify-center p-2 group-hover:text-primary transition duration-300">
           {icon}
         </figure>
@@ -88,8 +92,7 @@ function SettingItem({ item }) {
       </div>
 
       {/* Sub Items Setting */}
-
-      {children.length ? (
+      {children?.length ? (
         <div className="px-4 py-8">
           {children.map((child, idx) => {
             return <SubItemSetting key={idx} item={child} />;

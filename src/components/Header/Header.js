@@ -7,7 +7,7 @@ import NavItems from "./NavItems";
 
 export default function Header() {
   return (
-    <header className="min-h-full h-[calc(100vh_-_80px)]">
+    <header className="min-h-[calc(100vh_-_80px)]">
       <Box className="!px-[13px] h-full flex items-center justify-between flex-col">
         {/* logo */}
         <figure>
@@ -18,7 +18,7 @@ export default function Header() {
         <NavItems />
 
         {/* support */}
-        <button className="w-16 h-16 bg-primary text-white inline-block rounded-xl">
+        <button className="size-16 bg-primary text-white inline-flex items-center justify-center rounded-xl text-3xl">
           {supportIcon}
         </button>
       </Box>
